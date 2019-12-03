@@ -1,0 +1,10 @@
+<mat-card class="register-card">
+ <mat-form-field>
+      <input matInput type="text" placeholder="First Name" [(ngModel)]="profileData.firstname" required="">
+    </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Last Name" [(ngModel)]="profileData.lastname" required="">
+  </mat-form-field>
+    <br />
+    <button mat-raised-button color="primary" (click)="saveProfile(profileData)">Save</button>
+</mat-card>

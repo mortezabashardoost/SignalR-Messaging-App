@@ -1,0 +1,6 @@
+<mat-card class="message-card" id="new-message">
+  <mat-form-field>
+    <input matInput placeholder="Leave a message" autocomplete="off" [(ngModel)]="message.text" (keyup.enter)="post()">
+  </mat-form-field>
+    <button type="submit" (click)="post()" mat-raised-button color="primary">Post</button>
+</mat-card>

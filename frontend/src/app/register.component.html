@@ -1,0 +1,23 @@
+<mat-card class="register-card">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="First Name" formControlName="firstName">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Last Name" formControlName="lastName">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="email" placeholder="Email" formControlName="email" required="">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" formControlName="password">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+    </mat-form-field>
+    <br/>
+    <span *ngIf="form.errors?.mismatchFields"> Passwords do not match</span>
+    <br />
+    <button mat-raised-button color="primary">Register</button>
+  </form>
+</mat-card>

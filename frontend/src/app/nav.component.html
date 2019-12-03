@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/" class="home-title">InstaMessage</button>
+  <span style="flex: 1 1;"></span>
+  <button *ngIf="!auth.isAuthenticated" mat-button routerLink="/login">Login</button>
+  <button *ngIf="!auth.isAuthenticated" mat-button routerLink="/register">Register</button>
+  <button *ngIf="auth.isAuthenticated" mat-button routerLink="/profile">Welcome {{auth.name}}</button>
+  <button *ngIf="auth.isAuthenticated" mat-button (click)="auth.logout()">Logout</button>
+</mat-toolbar>
